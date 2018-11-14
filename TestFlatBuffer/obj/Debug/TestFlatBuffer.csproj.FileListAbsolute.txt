@@ -1,0 +1,7 @@
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.exe.config
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.exe
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.pdb
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.csprojAssemblyReference.cache
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.csproj.CoreCompileInputs.cache
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.exe
+C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.pdb

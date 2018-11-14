@@ -1,0 +1,21 @@
+
+namespace SerializeClass;
+
+table Person {
+  name:string;
+  parent:[Person];  
+  works: [Work];
+  nickNames: [NickName];
+}
+
+table Work {
+  id:string (key);
+  value:int;
+}
+
+table NickName {
+  id:string (key);
+  value: Person;
+}
+
+root_type Person;
