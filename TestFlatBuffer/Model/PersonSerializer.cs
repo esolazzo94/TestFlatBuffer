@@ -96,6 +96,15 @@ namespace TestFlatBuffer.Model
       return NickName.CreateNickName(_builder, stringID, person);
     }
 
+    public static PersonInstance Deserialize(byte[] data)
+    {
+      var bufReaded = new ByteBuffer(data);
+      var dataReceived = Person.GetRootAsPerson(bufReaded);
+
+
+      return null;
+    }
+
     public Byte[] GetBytes()
     {
       return this._builder.SizedByteArray();

@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dictionary\Data.cs" />
-    <Compile Include="Dictionary\Record.cs" />
     <Compile Include="FlatBuffers\ByteBuffer.cs" />
     <Compile Include="FlatBuffers\ByteBufferUtil.cs" />
     <Compile Include="FlatBuffers\FlatBufferBuilder.cs" />
@@ -58,7 +56,6 @@
     <Compile Include="Model\PersonSerializer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursive\Person.cs" />
     <Compile Include="SerializeClass\NickName.cs" />
     <Compile Include="SerializeClass\Person.cs" />
     <Compile Include="SerializeClass\Work.cs" />

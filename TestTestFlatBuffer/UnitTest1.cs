@@ -37,6 +37,7 @@ namespace TestTestFlatBuffer
       Person a = record2.Value.Value;
 
       var actual = default(PersonInstance);
+      actual = PersonSerializer.Deserialize(data);
 
       Assert.NotSame(expected, actual);
       Assert.Same(expected.name, actual.name);
