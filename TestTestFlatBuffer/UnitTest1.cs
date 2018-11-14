@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using TestFlatBuffer.Model;
 using Xunit;
+using FluentAssertions;
 
 namespace TestTestFlatBuffer
 {
@@ -17,7 +18,7 @@ namespace TestTestFlatBuffer
       PersonInstance expected = new PersonInstance(
       "Figlio",
       new List<PersonInstance> {
-        father,
+        child,
         new PersonInstance("Mother",null)
       }
      );
@@ -40,7 +41,12 @@ namespace TestTestFlatBuffer
       actual = PersonSerializer.Deserialize(data);
 
       Assert.NotSame(expected, actual);
-      Assert.Same(expected.name, actual.name);
+      Assert.Equal(expected.name, actual.name);
+      Assert.Equal(expected.Works, actual.Works);
+      Assert.Equal(expected.NickNames.Keys, actual.NickNames.Keys);
+      expected.NickNames.Should().BeEquivalentTo(actual.NickNames);
+      expected.Should().BeEquivalentTo(actual);
+
     }
   }
 }

@@ -100,9 +100,55 @@ namespace TestFlatBuffer.Model
     {
       var bufReaded = new ByteBuffer(data);
       var dataReceived = Person.GetRootAsPerson(bufReaded);
+      return ReadPerson(dataReceived);
+    }
 
+    public static PersonInstance ReadPerson(Person p)
+    {
+      var name = p.Name;
+      List<PersonInstance> parent = null;
+      if(p.ParentLength > 0)
+      {
+        parent = new List<PersonInstance>();
+        for (int i = 0; i< p.ParentLength; i++)
+        {
+          PersonInstance pList = ReadPerson(p.Parent(i).Value);
+          parent.Add(pList);
+        }
+      }
 
-      return null;
+      PersonInstance readedPerson = new PersonInstance(name,parent);
+
+      if (p.WorksLength > 0)
+      {
+        for (int i = 0; i < p.WorksLength; i++)
+        {
+          KeyValuePair<string, int> value = ReadWork(p.Works(i).Value);
+          readedPerson.Works.Add(value.Key,value.Value);
+        }
+
+      }
+
+      if (p.NickNamesLength > 0)
+      {
+        for (int i = 0; i < p.NickNamesLength; i++)
+        {
+          KeyValuePair<string, PersonInstance> value = ReadNickName(p.NickNames(i).Value);
+          readedPerson.NickNames.Add(value.Key, value.Value);
+        }
+      }
+
+      return readedPerson;
+    }
+
+    public static KeyValuePair<string, int> ReadWork(Work w)
+    {
+      return new KeyValuePair<string, int>(w.Id,w.Value);
+    }
+
+    public static KeyValuePair<string, PersonInstance> ReadNickName(NickName n)
+    {
+      return new KeyValuePair<string, PersonInstance>(n.Id, ReadPerson(n.Value.Value));
     }
 
     public Byte[] GetBytes()

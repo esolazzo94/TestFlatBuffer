@@ -5,3 +5,10 @@ C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatB
 C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.csproj.CoreCompileInputs.cache
 C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.exe
 C:\Users\esolazzo\source\repos\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.pdb
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.exe.config
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.exe
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\bin\Debug\TestFlatBuffer.pdb
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.csprojAssemblyReference.cache
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.csproj.CoreCompileInputs.cache
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.exe
+C:\Users\Erasmo\Desktop\TestFlatBuffer\TestFlatBuffer\obj\Debug\TestFlatBuffer.pdb
