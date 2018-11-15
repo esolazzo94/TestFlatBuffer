@@ -28,7 +28,7 @@ namespace TestTestFlatBuffer
 
 
       var data = new PersonSerializer().Serialize(expected).GetBytes();
-
+      /*
       var bufReaded = new ByteBuffer(data);
       var dataReceived = Person.GetRootAsPerson(bufReaded);
       var c = dataReceived.Name;
@@ -36,7 +36,7 @@ namespace TestTestFlatBuffer
       var record = dataReceived.WorksByKey("L1");
       NickName record2 = dataReceived.NickNamesByKey("F1").Value;
       Person a = record2.Value.Value;
-
+      */
       var actual = default(PersonInstance);
       actual = PersonSerializer.Deserialize(data);
 

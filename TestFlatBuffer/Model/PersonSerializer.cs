@@ -20,11 +20,8 @@ namespace TestFlatBuffer.Model
 
     public PersonSerializer Serialize(PersonInstance value)
     {
-      /*if (value is IPersonSerializable)
-      {*/
-        var person = WritePerson(value);
-        _builder.Finish(person.Value);
-     // }
+      var person = WritePerson(value);
+      _builder.Finish(person.Value);
       return this;
     }
 
@@ -42,10 +39,10 @@ namespace TestFlatBuffer.Model
         int index = 0;
         foreach (var person in value.parent)
         {
-          persons[index]= WritePerson(person);
+          persons[index] = WritePerson(person);
           index++;
         }
-        parentVector = Person.CreateParentVector(_builder,persons);   
+        parentVector = Person.CreateParentVector(_builder, persons);
       }
 
       VectorOffset worksVector = new VectorOffset();
@@ -83,10 +80,10 @@ namespace TestFlatBuffer.Model
       return Person.EndPerson(_builder);
     }
 
-    private Offset<Work> WriteWork(KeyValuePair<string,int> value)
+    private Offset<Work> WriteWork(KeyValuePair<string, int> value)
     {
       var stringID = WriteString(value.Key);
-      return Work.CreateWork(_builder,stringID,value.Value);
+      return Work.CreateWork(_builder, stringID, value.Value);
     }
 
     private Offset<NickName> WriteNickName(KeyValuePair<string, PersonInstance> value)
@@ -107,24 +104,24 @@ namespace TestFlatBuffer.Model
     {
       var name = p.Name;
       List<PersonInstance> parent = null;
-      if(p.ParentLength > 0)
+      if (p.ParentLength > 0)
       {
         parent = new List<PersonInstance>();
-        for (int i = 0; i< p.ParentLength; i++)
+        for (int i = 0; i < p.ParentLength; i++)
         {
           PersonInstance pList = ReadPerson(p.Parent(i).Value);
           parent.Add(pList);
         }
       }
 
-      PersonInstance readedPerson = new PersonInstance(name,parent);
+      PersonInstance readedPerson = new PersonInstance(name, parent);
 
       if (p.WorksLength > 0)
       {
         for (int i = 0; i < p.WorksLength; i++)
         {
           KeyValuePair<string, int> value = ReadWork(p.Works(i).Value);
-          readedPerson.Works.Add(value.Key,value.Value);
+          readedPerson.Works.Add(value.Key, value.Value);
         }
 
       }
@@ -143,7 +140,7 @@ namespace TestFlatBuffer.Model
 
     public static KeyValuePair<string, int> ReadWork(Work w)
     {
-      return new KeyValuePair<string, int>(w.Id,w.Value);
+      return new KeyValuePair<string, int>(w.Id, w.Value);
     }
 
     public static KeyValuePair<string, PersonInstance> ReadNickName(NickName n)
