@@ -16,7 +16,7 @@ namespace TestFlatBuffer
   {
     static void Main(string[] args)
     {
-      var father = new PersonInstance("Father", null);
+      var father = new PersonInstance("Fathers", null);
       var child = new PersonInstance("child", new List<PersonInstance>(new PersonInstance[] { father }));
       PersonInstance expected = new PersonInstance(
       "Figlio",

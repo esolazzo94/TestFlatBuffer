@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestFlatBuffer.Model
 {
-  public class PersonInstance // : IPersonSerializable
+  public class PersonInstance 
   {
     public string name;
     public List<PersonInstance> parent;
@@ -19,16 +19,7 @@ namespace TestFlatBuffer.Model
       this.name = name;
       this.parent = parent;
     }
- 
-    //public void Serialize()
-    //{
 
-    //}
-
-    //public void Deserialize()
-    //{
-
-    //}
 
   }
 }

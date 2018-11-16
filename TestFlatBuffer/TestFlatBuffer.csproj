@@ -51,7 +51,6 @@
     <Compile Include="FlatBuffers\Offset.cs" />
     <Compile Include="FlatBuffers\Struct.cs" />
     <Compile Include="FlatBuffers\Table.cs" />
-    <Compile Include="Model\IPersonSerializable.cs" />
     <Compile Include="Model\PersonIstance.cs" />
     <Compile Include="Model\PersonSerializer.cs" />
     <Compile Include="Program.cs" />
